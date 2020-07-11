@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { ResponsiveBump } from "@nivo/bump"
 
 // make sure parent container have a defined height when using
@@ -11,6 +11,7 @@ const CustomPoint = ({
   x,
   y,
   isActive,
+  isInactive,
   size,
   color,
   borderColor,
@@ -29,15 +30,16 @@ const CustomPoint = ({
         strokeWidth={borderWidth}
         rx="50%"
       />
-
-      <text textAnchor="middle" y={4} fill={"#e1e1e1"} fontSize="11px">
-        {parseInt(data.percentage)}%
-      </text>
-      {isActive && (
+      {!isActive && !isInactive && (
         <text textAnchor="middle" y={4} fill={"#e1e1e1"} fontSize="11px">
           {parseInt(data.percentage)}%
         </text>
       )}
+      {isActive ? (
+        <text textAnchor="middle" y={4} fill={"#e1e1e1"} fontSize="11px">
+          {parseInt(data.percentage)}%
+        </text>
+      ) : null}
     </g>
   )
 }
@@ -99,6 +101,9 @@ const ChartBump = ({ data }) => {
             strokeWidth: 1,
             strokeDasharray: "1 2",
           },
+        },
+        tooltip: {
+          color: "black",
         },
       }}
     />
