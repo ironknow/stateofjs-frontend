@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,300i,600");
+
+:root {
+  --background-color-landing: #202424;
+  --background-color: #212429;
+  --yellow: #fcf24c;
+  --blue: #6282c6;
+  --red: #fd696a;
+  --orange: #ef8047;
+  --green-fluo: #43c6c7;
+  --green-standard: #78c755;
+  --green-turc: #41c7c7;
+  --mauve: #9687e4;
+  --purple: #6d5e84;
+  --white: #e1e1e1;
+  --pink: #be73a4;
+  --dark: #212424;
+  --grey-light: #909191;
+}
+
+body {
+  font-family: IBM Plex Mono, sans-serif;
+  font-weight: 300;
+  background-color: var(--background-color);
+  color: var(--white);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+h3 {
+  font-size: 1.17rem;
+  color: var(--green-fluo);
+}
+text {
+  font-size: 12px !important;
+}
