@@ -1,6 +1,4 @@
 const formatDataBar = (overviews, surveyBar) => {
-  console.log(overviews)
-
   const colors = {
     would_use: "#EE6363",
     would_not_use: "#FC8E8F",
@@ -14,7 +12,7 @@ const formatDataBar = (overviews, surveyBar) => {
       framework: overview.id.charAt(0).toUpperCase() + overview.id.slice(1),
     }
     overview.buckets.forEach((bucket) => {
-      data[bucket.id] = bucket[surveyBar]
+      data[bucket.id] = Number(bucket[surveyBar])
       data[`${bucket.id}Color`] = colors[bucket.id]
     })
 

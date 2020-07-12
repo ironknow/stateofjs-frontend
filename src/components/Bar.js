@@ -45,7 +45,7 @@ const Bar = () => {
             </span>
 
             <StyledBar>
-              <ChartBar data={overviews} />
+              <ChartBar data={overviews} surveyBar={surveyBar} />
             </StyledBar>
           </>
         )

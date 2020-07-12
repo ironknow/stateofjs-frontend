@@ -103,7 +103,9 @@ const ChartBump = ({ data }) => {
           },
         },
         tooltip: {
-          color: "black",
+          color: "#1342a7",
+          fontSize: "14px",
+          boxShadow: "5px 5px rgba(0,0,0,0.2)",
         },
       }}
     />
