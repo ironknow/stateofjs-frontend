@@ -1,0 +1,34 @@
+{
+  "framework": {
+    "react": {
+      "description": "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+      "github": "https://github.com/facebook/react",
+      "homepage": "https://reactjs.org/"
+    },
+    "preact": {
+      "description": "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+      "github": "https://github.com/facebook/react",
+      "homepage": "https://reactjs.org/"
+    },
+    "vue.js": {
+      "description": "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+      "github": "https://github.com/facebook/react",
+      "homepage": "https://reactjs.org/"
+    },
+    "angular": {
+      "description": "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+      "github": "https://github.com/facebook/react",
+      "homepage": "https://reactjs.org/"
+    },
+    "svelte": {
+      "description": "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+      "github": "https://github.com/facebook/react",
+      "homepage": "https://reactjs.org/"
+    },
+    "ember": {
+      "description": "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+      "github": "https://github.com/facebook/react",
+      "homepage": "https://reactjs.org/"
+    }
+  }
+}

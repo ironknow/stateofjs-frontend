@@ -1,12 +1,12 @@
 import React from "react"
-import "../styles/App.css"
+import "./styles/App.css"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 //import Button from "stateofjs-library"
 
-import Landing from "./Landing"
-import Frameworks from "./Frameworks"
-import Framework from "./Framework"
+import Landing from "./container/Landing"
+import Frameworks from "./container/Frameworks"
+import Framework from "./container/Framework"
 
 // const httpLinkUser = createHttpLink({
 //   uri: "http://localhost:4000",
