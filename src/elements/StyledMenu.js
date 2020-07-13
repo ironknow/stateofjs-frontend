@@ -39,6 +39,10 @@ const StyledMenu = styled.aside`
       cursor: pointer;
     }
   }
+
+  .selected {
+    color: var(--green-fluo);
+  }
 `
 
 export default StyledMenu
