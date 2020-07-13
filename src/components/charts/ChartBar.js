@@ -40,7 +40,20 @@ const ChartBar = ({ data, surveyBar }) => (
         spacing: 10,
       },
     ]}
-    fill={[]}
+    fill={[
+      {
+        match: {
+          id: "fries",
+        },
+        id: "dots",
+      },
+      {
+        match: {
+          id: "sandwich",
+        },
+        id: "lines",
+      },
+    ]}
     borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
     axisTop={{
       tickSize: 5,
@@ -108,7 +121,6 @@ const ChartBar = ({ data, surveyBar }) => (
         borderWidth: 1,
         borderSize: "solid",
         borderColor: "white",
-
         dataFrom: "keys",
         anchor: "bottom",
         direction: "row",
@@ -121,7 +133,6 @@ const ChartBar = ({ data, surveyBar }) => (
         itemOpacity: 0.85,
         symbolSize: 20,
         itemTextColor: "white",
-
         effects: [
           {
             on: "hover",

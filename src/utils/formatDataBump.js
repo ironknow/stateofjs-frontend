@@ -9,13 +9,15 @@ const formatDataBump = (frameworks, survey) => {
   ]
 
   return frameworks.map((framework, index) => {
-    const arr = framework[survey].map(({ year, rank, percentage }) => {
-      return { x: year, y: rank, percentage: percentage }
-    })
+    const formatFramework = framework[survey].map(
+      ({ year, rank, percentage }) => {
+        return { x: year, y: rank, percentage: percentage }
+      }
+    )
     return {
       id: framework.id.charAt(0).toUpperCase() + framework.id.slice(1),
       color: colors[index],
-      data: arr,
+      data: formatFramework,
     }
   })
 }

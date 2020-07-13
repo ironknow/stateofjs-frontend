@@ -2,235 +2,35 @@ import React from "react"
 import ChartHeatMap from "../components/charts/ChartHeatMap"
 import HeaderGraph from "../components/Header/HeaderGraph"
 import StyledHeatMap from "../elements/StyledHeatMap"
+import { gql } from "apollo-boost"
+import { useQuery } from "@apollo/react-hooks"
+import { formatDataHeatMap } from "../utils/fomatDataHeatMap"
 
 const HeatMap = () => {
-  const data = [
+  const USAGE_QUERY = gql`
     {
-      country: "AD",
-      "hot dog": 57,
-      "hot dogColor": "hsl(71, 70%, 50%)",
-      burger: 20,
-      burgerColor: "hsl(53, 70%, 50%)",
-      sandwich: 65,
-      sandwichColor: "hsl(103, 70%, 50%)",
-      kebab: 42,
-      kebabColor: "hsl(284, 70%, 50%)",
-      fries: 92,
-      friesColor: "hsl(265, 70%, 50%)",
-      donut: 82,
-      donutColor: "hsl(34, 70%, 50%)",
-      junk: 21,
-      junkColor: "hsl(320, 70%, 50%)",
-      sushi: 85,
-      sushiColor: "hsl(193, 70%, 50%)",
-      ramen: 30,
-      ramenColor: "hsl(139, 70%, 50%)",
-      curry: 77,
-      curryColor: "hsl(300, 70%, 50%)",
-      udon: 20,
-      udonColor: "hsl(59, 70%, 50%)",
-    },
-    {
-      country: "AE",
-      "hot dog": 8,
-      "hot dogColor": "hsl(238, 70%, 50%)",
-      burger: 32,
-      burgerColor: "hsl(273, 70%, 50%)",
-      sandwich: 64,
-      sandwichColor: "hsl(28, 70%, 50%)",
-      kebab: 65,
-      kebabColor: "hsl(42, 70%, 50%)",
-      fries: 51,
-      friesColor: "hsl(93, 70%, 50%)",
-      donut: 49,
-      donutColor: "hsl(61, 70%, 50%)",
-      junk: 97,
-      junkColor: "hsl(280, 70%, 50%)",
-      sushi: 21,
-      sushiColor: "hsl(6, 70%, 50%)",
-      ramen: 48,
-      ramenColor: "hsl(317, 70%, 50%)",
-      curry: 39,
-      curryColor: "hsl(23, 70%, 50%)",
-      udon: 60,
-      udonColor: "hsl(26, 70%, 50%)",
-    },
-    {
-      country: "AF",
-      "hot dog": 54,
-      "hot dogColor": "hsl(92, 70%, 50%)",
-      burger: 22,
-      burgerColor: "hsl(185, 70%, 50%)",
-      sandwich: 65,
-      sandwichColor: "hsl(322, 70%, 50%)",
-      kebab: 47,
-      kebabColor: "hsl(99, 70%, 50%)",
-      fries: 76,
-      friesColor: "hsl(292, 70%, 50%)",
-      donut: 64,
-      donutColor: "hsl(128, 70%, 50%)",
-      junk: 42,
-      junkColor: "hsl(222, 70%, 50%)",
-      sushi: 57,
-      sushiColor: "hsl(203, 70%, 50%)",
-      ramen: 51,
-      ramenColor: "hsl(270, 70%, 50%)",
-      curry: 59,
-      curryColor: "hsl(325, 70%, 50%)",
-      udon: 94,
-      udonColor: "hsl(178, 70%, 50%)",
-    },
-    {
-      country: "AG",
-      "hot dog": 72,
-      "hot dogColor": "hsl(273, 70%, 50%)",
-      burger: 30,
-      burgerColor: "hsl(156, 70%, 50%)",
-      sandwich: 96,
-      sandwichColor: "hsl(270, 70%, 50%)",
-      kebab: 45,
-      kebabColor: "hsl(156, 70%, 50%)",
-      fries: 30,
-      friesColor: "hsl(29, 70%, 50%)",
-      donut: 87,
-      donutColor: "hsl(65, 70%, 50%)",
-      junk: 21,
-      junkColor: "hsl(342, 70%, 50%)",
-      sushi: 0,
-      sushiColor: "hsl(284, 70%, 50%)",
-      ramen: 65,
-      ramenColor: "hsl(192, 70%, 50%)",
-      curry: 19,
-      curryColor: "hsl(331, 70%, 50%)",
-      udon: 15,
-      udonColor: "hsl(251, 70%, 50%)",
-    },
-    {
-      country: "AI",
-      "hot dog": 84,
-      "hot dogColor": "hsl(221, 70%, 50%)",
-      burger: 94,
-      burgerColor: "hsl(214, 70%, 50%)",
-      sandwich: 62,
-      sandwichColor: "hsl(334, 70%, 50%)",
-      kebab: 100,
-      kebabColor: "hsl(261, 70%, 50%)",
-      fries: 45,
-      friesColor: "hsl(7, 70%, 50%)",
-      donut: 72,
-      donutColor: "hsl(52, 70%, 50%)",
-      junk: 73,
-      junkColor: "hsl(306, 70%, 50%)",
-      sushi: 74,
-      sushiColor: "hsl(97, 70%, 50%)",
-      ramen: 33,
-      ramenColor: "hsl(42, 70%, 50%)",
-      curry: 53,
-      curryColor: "hsl(285, 70%, 50%)",
-      udon: 88,
-      udonColor: "hsl(116, 70%, 50%)",
-    },
-    {
-      country: "AL",
-      "hot dog": 80,
-      "hot dogColor": "hsl(338, 70%, 50%)",
-      burger: 88,
-      burgerColor: "hsl(160, 70%, 50%)",
-      sandwich: 78,
-      sandwichColor: "hsl(25, 70%, 50%)",
-      kebab: 23,
-      kebabColor: "hsl(298, 70%, 50%)",
-      fries: 20,
-      friesColor: "hsl(88, 70%, 50%)",
-      donut: 86,
-      donutColor: "hsl(154, 70%, 50%)",
-      junk: 67,
-      junkColor: "hsl(115, 70%, 50%)",
-      sushi: 74,
-      sushiColor: "hsl(144, 70%, 50%)",
-      ramen: 79,
-      ramenColor: "hsl(311, 70%, 50%)",
-      curry: 32,
-      curryColor: "hsl(59, 70%, 50%)",
-      udon: 31,
-      udonColor: "hsl(213, 70%, 50%)",
-    },
-    {
-      country: "AM",
-      "hot dog": 34,
-      "hot dogColor": "hsl(113, 70%, 50%)",
-      burger: 96,
-      burgerColor: "hsl(50, 70%, 50%)",
-      sandwich: 22,
-      sandwichColor: "hsl(357, 70%, 50%)",
-      kebab: 78,
-      kebabColor: "hsl(74, 70%, 50%)",
-      fries: 0,
-      friesColor: "hsl(306, 70%, 50%)",
-      donut: 14,
-      donutColor: "hsl(125, 70%, 50%)",
-      junk: 92,
-      junkColor: "hsl(256, 70%, 50%)",
-      sushi: 27,
-      sushiColor: "hsl(285, 70%, 50%)",
-      ramen: 16,
-      ramenColor: "hsl(198, 70%, 50%)",
-      curry: 68,
-      curryColor: "hsl(197, 70%, 50%)",
-      udon: 99,
-      udonColor: "hsl(82, 70%, 50%)",
-    },
-    {
-      country: "AO",
-      "hot dog": 58,
-      "hot dogColor": "hsl(27, 70%, 50%)",
-      burger: 42,
-      burgerColor: "hsl(142, 70%, 50%)",
-      sandwich: 78,
-      sandwichColor: "hsl(46, 70%, 50%)",
-      kebab: 79,
-      kebabColor: "hsl(204, 70%, 50%)",
-      fries: 24,
-      friesColor: "hsl(45, 70%, 50%)",
-      donut: 84,
-      donutColor: "hsl(128, 70%, 50%)",
-      junk: 32,
-      junkColor: "hsl(118, 70%, 50%)",
-      sushi: 86,
-      sushiColor: "hsl(134, 70%, 50%)",
-      ramen: 37,
-      ramenColor: "hsl(27, 70%, 50%)",
-      curry: 83,
-      curryColor: "hsl(103, 70%, 50%)",
-      udon: 94,
-      udonColor: "hsl(111, 70%, 50%)",
-    },
-    {
-      country: "AQ",
-      "hot dog": 61,
-      "hot dogColor": "hsl(43, 70%, 50%)",
-      burger: 91,
-      burgerColor: "hsl(111, 70%, 50%)",
-      sandwich: 45,
-      sandwichColor: "hsl(130, 70%, 50%)",
-      kebab: 53,
-      kebabColor: "hsl(247, 70%, 50%)",
-      fries: 92,
-      friesColor: "hsl(217, 70%, 50%)",
-      donut: 28,
-      donutColor: "hsl(27, 70%, 50%)",
-      junk: 34,
-      junkColor: "hsl(317, 70%, 50%)",
-      sushi: 36,
-      sushiColor: "hsl(169, 70%, 50%)",
-      ramen: 48,
-      ramenColor: "hsl(295, 70%, 50%)",
-      curry: 33,
-      curryColor: "hsl(308, 70%, 50%)",
-      udon: 45,
-      udonColor: "hsl(291, 70%, 50%)",
-    },
-  ]
+      usages {
+        id
+        ranges {
+          range
+          percentage
+          count
+        }
+        total
+      }
+    }
+  `
+
+  const { loading, error, data } = useQuery(USAGE_QUERY)
+
+  if (loading) return "Loading..."
+  if (error) return `Error! ${error.message}`
+  //const rankings = formatDataBump(data.rankings, survey)
+  console.log("heatmat", data)
+  const usages = formatDataHeatMap(data.usages)
+
+  console.log(usages)
+
   return (
     <>
       <div className="header-graphs">
@@ -244,7 +44,7 @@ const HeatMap = () => {
       </span>
 
       <StyledHeatMap>
-        <ChartHeatMap data={data} />
+        <ChartHeatMap data={usages} />
       </StyledHeatMap>
     </>
   )

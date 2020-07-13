@@ -27,6 +27,7 @@ const Bar = () => {
         if (error) return <div>Error</div>
 
         const overviews = formatDataBar(data.overviews, surveyBar)
+        console.log(overviews)
 
         return (
           <>

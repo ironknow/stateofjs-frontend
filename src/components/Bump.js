@@ -29,6 +29,7 @@ const Bump = () => {
   //const rankings = formatDataBump(data.rankings, survey)
 
   const rankings = formatDataBump(data.rankings, survey)
+  console.log(rankings)
 
   return (
     <>
