@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 
 import { ResponsiveHeatMap } from "@nivo/heatmap"
-import { setNestedObjectValues } from "formik"
 
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
@@ -23,7 +22,6 @@ const ChartHeatMap = ({ data /* see data tab */, keys }) => {
         width,
         height,
         color,
-        opacity,
         borderWidth,
         borderColor,
         enableLabel,
@@ -46,7 +44,7 @@ const ChartHeatMap = ({ data /* see data tab */, keys }) => {
             }}
             style={{ cursor: "pointer" }}
           >
-            // Your custom SVG elements goes here
+            {/* // Your custom SVG elements goes here */}
             {enableLabel && (
               <>
                 <rect

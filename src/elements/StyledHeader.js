@@ -23,6 +23,7 @@ const StyledHeader = styled.header`
     align-items: center;
   }
   .title {
+    width: 80px;
     padding-right: 2rem;
     color: var(--green-fluo);
     font-weight: 600;

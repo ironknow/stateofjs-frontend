@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { ResponsiveBump } from "@nivo/bump"
 
 // make sure parent container have a defined height when using

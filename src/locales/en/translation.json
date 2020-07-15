@@ -9,27 +9,33 @@
       "homepage": "https://reactjs.org/"
     },
     "preact": {
-      "symbol": "PR",
+      "symbol": "Pr",
       "description": "Fast 3kB React alternative with the same modern API. Components & Virtual DOM.",
       "github": "https://github.com/preactjs/preact",
       "homepage": "https://reactjs.org/"
     },
-    "vue.js": {
-      "description": "A progressive, incrementally-adoptable framework for building UI on the web",
-      "github": "https://github.com/vuejs/vue",
-      "homepage": "https://vuejs.org/"
+    "vue": {
+      "js": {
+        "symbol": "V",
+        "description": "A progressive, incrementally-adoptable framework for building UI on the web",
+        "github": "https://github.com/vuejs/vue",
+        "homepage": "https://vuejs.org/"
+      }
     },
     "angular": {
+      "symbol": "Ng",
       "description": "One framework. Mobile & desktop",
       "github": "One framework. Mobile & desktop.",
       "homepage": "https://github.com/angular/angular"
     },
     "svelte": {
+      "symbol": "Sv",
       "description": "Cybernetically enhanced web apps",
       "github": "https://github.com/sveltejs/svelte",
       "homepage": "https://svelte.dev/"
     },
     "ember": {
+      "symbol": "Em",
       "description": "Ember.js - A JavaScript framework for creating ambitious web applications",
       "github": "https://github.com/emberjs/ember.js",
       "homepage": "https://emberjs.com/"
