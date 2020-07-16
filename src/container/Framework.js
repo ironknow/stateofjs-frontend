@@ -22,7 +22,7 @@ const Framework = ({ t }) => {
           <Header framework={id} />
           <main className="main">
             <Description id={id} />
-            <Stream framework={id} />
+            <Stream framework={id === "vue.js" ? "vuejs" : id} />
           </main>
         </div>
       </StyledFrameworks>
