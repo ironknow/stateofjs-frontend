@@ -8,7 +8,11 @@ const Header = ({ framework }) => {
       <Link to="/frameworks">
         <div className="section">Front End Frameworks</div>
       </Link>
-      <div className="lang">Languages</div>
+      <div className="langs">
+        <span className="lang">EN</span>
+        <span className="lang">-</span>
+        <span className="lang">FR</span>
+      </div>
       <div className="title">{framework}</div>
     </StyledHeader>
   )

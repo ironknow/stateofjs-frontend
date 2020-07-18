@@ -82,9 +82,6 @@ const ChartBar = ({ data, surveyBar }) => (
     } // 4 stars
     axisLeft={null}
     theme={{
-      legend: {
-        backgroundColor: "pink",
-      },
       label: {
         color: "white",
         fontSize: "bold",

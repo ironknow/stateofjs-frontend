@@ -1,5 +1,6 @@
 import React from "react"
 import PeriodicElements from "../../components/PeriodicElement"
+import { Link } from "react-router-dom"
 
 const elements = [
   {

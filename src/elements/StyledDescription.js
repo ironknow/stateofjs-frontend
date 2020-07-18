@@ -22,6 +22,7 @@ const StyledDescription = styled.div`
       margin-top: 0.5rem;
       font-size: 20px;
       color: #868a8c;
+      text-transform: capitalize;
     }
   }
   .description {
@@ -31,6 +32,7 @@ const StyledDescription = styled.div`
       font-size: 32px;
       line-height: 54px;
       font-weight: 800;
+      text-transform: capitalize;
     }
     .description-text {
       width: 100%;

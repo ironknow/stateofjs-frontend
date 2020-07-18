@@ -4,6 +4,7 @@ import Bar from "../components/Bar"
 import HeatMap from "../components/HeatMap"
 import Layout from "../components/Layout"
 import Header from "../components/Header/Header"
+import Footer from "../components/Footer"
 import Title from "../components/Title"
 import Subtitle from "../components/Subtitle"
 import StyledFrameworks from "../elements/StyledFrameworks"
@@ -20,6 +21,7 @@ const Frameworks = () => {
             <Bump />
             <Bar />
             <HeatMap />
+            <Footer />
           </main>
         </div>
       </StyledFrameworks>

@@ -8,7 +8,9 @@ const Menu = ({ frameworksList }) => {
   console.log(id)
   return (
     <StyledMenu>
-      <HeaderMenu />
+      <Link to="/">
+        <HeaderMenu />
+      </Link>
       <div className="container">
         <Link to="/frameworks">
           <div className="title">Front End Frameworks</div>

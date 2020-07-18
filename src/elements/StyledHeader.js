@@ -13,14 +13,27 @@ const StyledHeader = styled.header`
     color: var(--green-fluo);
     font-weight: 600;
   }
-  .lang {
+  .langs {
     width: 120px;
     height: 100%;
     border-right: 1px solid var(--grey-light);
     border-left: 1px solid var(--grey-light);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    .lang {
+      font-weight: 800;
+      &:nth-child(1) {
+        padding-left: 1rem;
+      }
+      &:nth-child(3) {
+        padding-right: 1rem;
+      }
+      &:hover {
+        cursor: pointer;
+        color: var(--green-fluo);
+      }
+    }
   }
   .title {
     width: 80px;

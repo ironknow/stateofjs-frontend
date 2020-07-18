@@ -1,12 +1,14 @@
-import React, { useState, useMemo } from "react"
+import React, { useState } from "react"
 import { gql } from "apollo-boost"
-import { Query, useQuery } from "react-apollo"
+import { useQuery } from "react-apollo"
 import formatDataStream from "../utils/formatDataStream"
 import HeaderGraph from "../components/Header/HeaderGraph"
+import ChartStream from "./charts/ChartStream"
+import StyledStream from "../elements/StyledStream"
 
 const Stream = ({ framework }) => {
   const [survey, setSurvey] = useState("count")
-  console.log(framework)
+
   const EXPERIENCES_QUERY = gql`
     query experiences($framework: String!) {
       experiences(id: $framework) {
@@ -33,8 +35,12 @@ const Stream = ({ framework }) => {
   console.log(data)
 
   // console.log("experiences", data.experiences)
-  // const experiences = formatDataStream(data.overviews, framework, survey)
-  // console.log(experiences)
+  const experiences = formatDataStream(
+    data.experiences[0].data,
+    framework,
+    survey
+  )
+  console.log("experiences fomated", experiences)
 
   return (
     <>
@@ -48,9 +54,9 @@ const Stream = ({ framework }) => {
 
       <span className="title-graphs">Respondent's experience with React.</span>
 
-      {/* <StyledBar> */}
-      {/* <ChartBar data={overviews} surveyBar={surveyBar} /> */}
-      {/* </StyledBar> */}
+      <StyledStream>
+        <ChartStream data={experiences} />
+      </StyledStream>
     </>
   )
 }

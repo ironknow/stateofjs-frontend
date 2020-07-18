@@ -3,6 +3,7 @@ import Menu from "./Menu"
 import StyledLayout from "../elements/StyledLayout"
 import { gql } from "apollo-boost"
 import { useQuery } from "@apollo/react-hooks"
+import Footer from "../components/Footer"
 
 const Layout = ({ children }) => {
   const RANKING_QUERY = gql`
