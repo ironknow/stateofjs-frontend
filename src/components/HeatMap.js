@@ -5,8 +5,11 @@ import StyledHeatMap from "../elements/StyledHeatMap"
 import { gql } from "apollo-boost"
 import { useQuery } from "@apollo/react-hooks"
 import { formatDataHeatMap } from "../utils/fomatDataHeatMap"
+import { useTranslation } from "react-i18next"
 
 const HeatMap = () => {
+  const [t] = useTranslation()
+
   const USAGE_QUERY = gql`
     {
       usages {
@@ -25,22 +28,19 @@ const HeatMap = () => {
 
   if (loading) return "Loading..."
   if (error) return `Error! ${error.message}`
-  //const rankings = formatDataBump(data.rankings, survey)
-  console.log("heatmat", data)
-  const usages = formatDataHeatMap(data.usages)
 
-  console.log(usages)
+  const usages = formatDataHeatMap(data.usages)
 
   return (
     <>
       <div className="header-graphs">
-        <HeaderGraph label={"Usage by Years Of Experience"} surveys={[]} />
+        <HeaderGraph
+          label={t(`frameworks.heatmap.header.title`)}
+          surveys={[]}
+        />
       </div>
       <span className="title-graphs">
-        For each technology, how usage is spread among respondents who picked
-        different experience ranges. <br /> Note that the experience in question
-        here is general JavaScript experience, not experience with a <br />
-        specific technology.
+        {t(`frameworks.heatmap.chart.description`)}
       </span>
 
       <StyledHeatMap>

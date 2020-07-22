@@ -21,18 +21,25 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     .lang {
       font-weight: 800;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       &:nth-child(1) {
-        padding-left: 1rem;
-      }
-      &:nth-child(3) {
-        padding-right: 1rem;
+        border-right: 1px solid var(--grey-light);
       }
       &:hover {
         cursor: pointer;
         color: var(--green-fluo);
       }
+    }
+    .selected {
+      color: var(--green-fluo);
     }
   }
   .title {

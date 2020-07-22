@@ -27,7 +27,7 @@ const Description = ({ id }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Homepage
+            {t(`frameworks.link.homepage`)}
           </a>
           <a
             className="link"

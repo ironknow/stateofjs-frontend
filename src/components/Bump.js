@@ -5,9 +5,11 @@ import ChartBump from "../components/charts/ChartBump"
 import formatDataBump from "../utils/formatDataBump"
 import HeaderGraph from "../components/Header/HeaderGraph"
 import StyledBumb from "../elements/StyledBump"
+import { useTranslation } from "react-i18next"
 
 const Bump = () => {
   const [survey, setSurvey] = useState("satisfaction")
+  const [t] = useTranslation()
 
   const RANKING_QUERY = gql`
     {
@@ -26,22 +28,20 @@ const Bump = () => {
 
   if (loading) return "Loading..."
   if (error) return `Error! ${error.message}`
-  //const rankings = formatDataBump(data.rankings, survey)
 
   const rankings = formatDataBump(data.rankings, survey)
-  console.log(rankings)
 
   return (
     <>
       <div className="header-graphs">
         <HeaderGraph
-          label={"Rankings"}
+          label={t(`frameworks.bump.header.title`)}
           surveys={["satisfaction", "awareness", "interest"]}
           setSurvey={setSurvey}
         />
       </div>
       <span className="title-graphs">
-        Awareness, interest, and satisfaction ratio rankings.
+        {t(`frameworks.bump.chart.description`)}
       </span>
       <StyledBumb>
         <ChartBump data={rankings} />

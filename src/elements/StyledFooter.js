@@ -8,6 +8,7 @@ const StyledFooter = styled.footer`
   align-items: center;
   justify-content: center;
   color: var(--white);
+
   .footer-link {
     color: var(--green-fluo);
   }

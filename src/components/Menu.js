@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom"
 
 const Menu = ({ frameworksList }) => {
   const { id } = useParams()
-  console.log(id)
+
   return (
     <StyledMenu>
       <Link to="/">

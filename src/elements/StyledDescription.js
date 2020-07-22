@@ -41,9 +41,7 @@ const StyledDescription = styled.div`
 
     .links {
       display: flex;
-      justify-content: space-between;
       margin-top: 1rem;
-      width: 150px;
     }
     .link {
       border: 1px solid var(--white);
@@ -52,6 +50,8 @@ const StyledDescription = styled.div`
       font-size: 12px;
       font-weight: 700;
       text-transform: capitalize;
+      width: auto;
+      margin-right: 0.5rem;
 
       &:hover {
         cursor: pointer;

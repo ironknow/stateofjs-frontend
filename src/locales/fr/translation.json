@@ -1,1 +1,82 @@
-{ "welcome": "salut" }
+{
+  "frameworks": {
+    "title": "Front End Frameworks",
+    "subtitle": "Framework et bibliothèques front-end.",
+    "link": {
+      "satisfaction": "satisfaction",
+      "interest": "intérêt",
+      "awareness": "connaissance",
+      "percentage": "pourcentage",
+      "count": "nombre",
+      "homepage": "accueil"
+    },
+    "bump": {
+      "header": {
+        "title": "Classements"
+      },
+      "chart": {
+        "description": "Classements par notoriété, intérêt et de taux de satisfaction."
+      }
+    },
+    "bar": {
+      "header": {
+        "title": "Catégories"
+      },
+      "chart": {
+        "description": "Aperçu des opinions sur la technologie. Les segments sombres représentent des opinions positives, tandis que les segments plus clairs correspondent à des sentiments négatifs."
+      }
+    },
+    "heatmap": {
+      "header": {
+        "title": "Usage par années d'experience"
+      },
+      "chart": {
+        "description": "Pour chaque technologie, usage en fonction des années d'expérience. Notez que l'expérience en question est une expérience générique en JavaScript et non une expérience avec une technologie spécifique."
+      }
+    }
+  },
+  "framework": {
+    "chart": { "title": "L'expérience dans le temps" },
+    "react": {
+      "symbol": "R",
+      "description": "Une bibliothèque JavaScript, efficace et flexible pour créer des interfaces utilisateur.",
+      "github": "https://github.com/facebook/react",
+      "homepage": "https://reactjs.org/"
+    },
+    "preact": {
+      "symbol": "Pr",
+      "description": "Alternative rapide de 3 Ko avec la même API moderne. Composants et DOM virtuel.",
+      "github": "https://github.com/preactjs/preact",
+      "homepage": {
+        "label": "Page d'accueil",
+        "link": "https://reactjs.org/"
+      }
+    },
+    "vue": {
+      "js": {
+        "symbol": "V",
+        "description": "Un framework pour créer une interface utilisateur sur le Web",
+        "github": "https://github.com/vuejs/vue",
+        "homepage": "https://vuejs.org/"
+      }
+    },
+    "angular": {
+      "symbol": "Ng",
+      "description": "Un framework. Mobile et bureau.",
+      "github": "One framework. Mobile & desktop.",
+      "homepage": "https://github.com/angular/angular"
+    },
+    "svelte": {
+      "symbol": "Sv",
+      "description": "Applications Web améliorées cybernétiquement",
+      "github": "https://github.com/sveltejs/svelte",
+      "homepage": "https://svelte.dev/"
+    },
+    "ember": {
+      "symbol": "Em",
+      "description": "Ember.js - Un framework JavaScript pour créer des applications web ambitieuses",
+      "github": "https://github.com/emberjs/ember.js",
+      "homepage": "https://emberjs.com/"
+    }
+  }
+}

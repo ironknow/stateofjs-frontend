@@ -1,7 +1,44 @@
 {
-  "hello": "salut",
+  "frameworks": {
+    "title": "Front End Frameworks",
+    "subtitle": "Front-end frameworks and libraries.",
+    "link": {
+      "satisfaction": "satisfaction",
+      "interest": "Interest",
+      "awareness": "awareness",
+      "percentage": "percentage",
+      "count": "count",
+      "homepage": "homepage"
+    },
+
+    "bump": {
+      "header": {
+        "title": "Ranking"
+      },
+      "chart": {
+        "description": "Awareness, interest, and satisfaction ratio rankings."
+      }
+    },
+    "bar": {
+      "header": {
+        "title": "Category Overview"
+      },
+      "chart": {
+        "description": "Overview of opinions on the technologies surveyed. Darker segments represent positive opinions, while lighter segments correspond to negative sentiment."
+      }
+    },
+    "heatmap": {
+      "header": {
+        "title": "Usage by Years Of Experience"
+      },
+      "chart": {
+        "description": "For each technology, how usage is spread among respondents who picked different experience ranges. Note that the experience in question here is general JavaScript experience, not experience with a specific technology."
+      }
+    }
+  },
 
   "framework": {
+    "chart": { "title": "React Experience Over Time" },
     "react": {
       "symbol": "R",
       "description": "A declarative, efficient, and flexible JavaScript library for building user interfaces.",

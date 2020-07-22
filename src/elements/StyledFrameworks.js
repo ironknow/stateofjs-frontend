@@ -19,10 +19,12 @@ const StyledFrameworks = styled.div`
     }
     .main {
       padding: 3rem 4rem;
+      min-height: 600px;
       @media (max-width: 968px) {
         padding: 0;
       }
     }
+
     .title-graphs {
       margin-top: 5px;
       font-size: 1rem;

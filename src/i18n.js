@@ -2,7 +2,6 @@ import i18n from "i18next"
 import { initReactI18next } from "react-i18next"
 import translationFR from "./locales/fr/translation.json"
 import translationEN from "./locales/en/translation.json"
-
 import Backend from "i18next-http-backend"
 //import LanguageDetector from 'i18next-browser-languagedetector';
 // not like to use this?

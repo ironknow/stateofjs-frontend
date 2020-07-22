@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { gql } from "apollo-boost"
 import { useQuery } from "react-apollo"
+import { useTranslation } from "react-i18next"
 import formatDataStream from "../utils/formatDataStream"
 import HeaderGraph from "../components/Header/HeaderGraph"
 import ChartStream from "./charts/ChartStream"
@@ -8,6 +9,7 @@ import StyledStream from "../elements/StyledStream"
 
 const Stream = ({ framework }) => {
   const [survey, setSurvey] = useState("count")
+  const [t] = useTranslation()
 
   const EXPERIENCES_QUERY = gql`
     query experiences($framework: String!) {
@@ -46,13 +48,15 @@ const Stream = ({ framework }) => {
     <>
       <div className="header-graphs">
         <HeaderGraph
-          label={"React Experience Over Time"}
+          label={t(`framework.chart.title`)}
           surveys={["percentage", "count"]}
           setSurvey={setSurvey}
         />
       </div>
 
-      <span className="title-graphs">Respondent's experience with React.</span>
+      <span className="title-graphs">
+        {t(`framework.${framework}.description`)}
+      </span>
 
       <StyledStream>
         <ChartStream data={experiences} />

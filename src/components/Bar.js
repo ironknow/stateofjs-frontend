@@ -5,8 +5,13 @@ import ChartBar from "../components/charts/ChartBar"
 import formatDataBar from "../utils/formatDataBar"
 import HeaderGraph from "../components/Header/HeaderGraph"
 import StyledBar from "../elements/StyledBar"
+import Loading from "../components/Loading"
+import { useTranslation } from "react-i18next"
+
 const Bar = () => {
   const [surveyBar, setSurveyBar] = useState("count")
+  const [t] = useTranslation()
+
   const OVERVIEW_QUERY = gql`
     {
       overviews {
@@ -23,26 +28,28 @@ const Bar = () => {
   return (
     <Query query={OVERVIEW_QUERY}>
       {({ error, loading, data }) => {
-        if (loading) return <div>Fetching</div>
+        if (loading)
+          return (
+            <div>
+              <Loading />
+            </div>
+          )
         if (error) return <div>Error</div>
 
         const overviews = formatDataBar(data.overviews, surveyBar)
-        console.log(overviews)
 
         return (
           <>
             <div className="header-graphs">
               <HeaderGraph
-                label={"Category Overview"}
+                label={t(`frameworks.bar.header.title`)}
                 surveys={["percentage", "count"]}
                 setSurvey={setSurveyBar}
               />
             </div>
 
             <span className="title-graphs">
-              Overview of opinions on the technologies surveyed. Darker segments
-              represent positive opinions, while lighter segments correspond to
-              negative sentiment.
+              {t(`frameworks.bar.chart.description`)}
             </span>
 
             <StyledBar>

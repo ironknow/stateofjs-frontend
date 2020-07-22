@@ -6,7 +6,7 @@ import { ResponsiveStream } from "@nivo/stream"
 // website examples showcase many properties,
 // you'll often use just a few of them.
 
-const datanew = [
+const data = [
   {
     interested: 3619,
     never_heard: 55,
@@ -37,7 +37,7 @@ const datanew = [
   },
 ]
 
-const keysnew = [
+const keys = [
   "interested",
   "never_heard",
   "not_interested",
@@ -45,46 +45,11 @@ const keysnew = [
   "would_use",
 ]
 
-const keys = ["Raoul", "Josiane", "Marcel", "René", "Paul", "Jacques"]
-const data = [
-  {
-    Raoul: 199,
-    Josiane: 196,
-    Marcel: 180,
-    René: 170,
-    Paul: 189,
-    Jacques: 190,
-  },
-  {
-    Raoul: 50,
-    Josiane: 158,
-    Marcel: 64,
-    René: 84,
-    Paul: 55,
-    Jacques: 72,
-  },
-  {
-    Raoul: 116,
-    Josiane: 81,
-    Marcel: 51,
-    René: 174,
-    Paul: 151,
-    Jacques: 30,
-  },
-  {
-    Raoul: 84,
-    Josiane: 135,
-    Marcel: 190,
-    René: 77,
-    Paul: 31,
-    Jacques: 88,
-  },
-]
-
-const ChartStream = (/* see data tab */ { data }) => (
+const ChartStream = (/* see data tab */
+/*{ data }*/) => (
   <ResponsiveStream
-    data={datanew}
-    keys={keysnew}
+    data={data}
+    keys={keys}
     margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
     axisTop={{
       orient: "top",
