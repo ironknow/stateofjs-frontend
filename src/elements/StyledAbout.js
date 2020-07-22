@@ -6,7 +6,7 @@ const StyledAbout = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  @media (max-width: 768px) {
+  @media (max-width: 968px) {
     width: 90%;
   }
 
@@ -15,7 +15,7 @@ const StyledAbout = styled.div`
     magin-top: 80px;
     font-weight: 600;
     width: 300px;
-    @media (max-width: 768px) {
+    @media (max-width: 968px) {
       width: 100%;
     }
 

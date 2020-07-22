@@ -6,11 +6,19 @@ const StyledHeaderChart = styled.div`
   justify-content: space-between;
   height: 45px;
   align-items: center;
+  @media (max-width: 968px) {
+    width: 100%;
+  }
+
   .label {
     font-size: 20px;
     color: var(--white);
     font-weight: 800;
+    @media (max-width: 968px) {
+      display: none;
+    }
   }
+
   .links {
     display: flex;
     margin-bottom: 1rem;

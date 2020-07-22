@@ -14,11 +14,24 @@ const StyledMenu = styled.aside`
   overflow-y: hidden;
 
   @media (max-width: 968px) {
-    display: none;
+    padding-top: 1rem;
+    width: 100%;
+    height: 140px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
   }
 
   .container {
     margin-left: 2rem;
+    @media (max-width: 968px) {
+      display: flex;
+      width: 90%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   .title {
@@ -26,7 +39,11 @@ const StyledMenu = styled.aside`
     font-weight: 800;
     color: var(--green-turc);
     margin: 10px 0;
+    @media (max-width: 968px) {
+      width: 100%;
+    }
   }
+
   .list {
     font-size: 14px;
     line-height: 24px;

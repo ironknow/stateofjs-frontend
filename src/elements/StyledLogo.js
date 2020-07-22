@@ -6,7 +6,7 @@ export const StyledLogo = styled.div`
   height: 290px;
   display: flex;
   flex-wrap: wrap;
-  @media (max-width: 568px) {
+  @media (max-width: 968px) {
     width: 100%;
     justify-content: center;
   }
@@ -25,7 +25,7 @@ export const StyledLogoElement = styled.div`
   font-size: 36px;
   box-sizing:border-box;
 
-  @media (max-width: 568px) {
+  @media (max-width: 968px) {
     width: 70px;
     height: 70px;
     font-size: 26px;

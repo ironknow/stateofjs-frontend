@@ -17,11 +17,6 @@ const Header = ({ framework }) => {
       <Link to="/frameworks">
         <div className="section">Front End Frameworks</div>
       </Link>
-      <div className="home">
-        <Link to="/">
-          <div className="home">Home</div>
-        </Link>
-      </div>
 
       <div className="langs">
         {langs &&
@@ -38,11 +33,6 @@ const Header = ({ framework }) => {
           })}
       </div>
 
-      <div className="menu">
-        <Link to="/menu">
-          <div className="menu">Menu</div>
-        </Link>
-      </div>
       <div className="title">{framework}</div>
     </StyledHeader>
   )

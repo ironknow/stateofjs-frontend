@@ -21,6 +21,10 @@ ${({ component }) =>
     border: 1px solid #5d6069;
     border-right: none;
     border-top: none;
+
+    @media (max-width: 968px) {
+      border: 1px solid #5d6069;
+    }
   `}
 
 
