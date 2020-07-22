@@ -11,6 +11,10 @@ const StyledLanding = styled.div`
     height: 400px;
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: 968px) {
+      display: none;
+    }
   }
 `
 export default StyledLanding

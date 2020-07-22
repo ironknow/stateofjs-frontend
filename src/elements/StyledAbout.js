@@ -6,12 +6,18 @@ const StyledAbout = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 
   .about-description {
     margin-top: 40px;
     magin-top: 80px;
     font-weight: 600;
     width: 300px;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
 
     .about-text {
       margin-top: 10px;

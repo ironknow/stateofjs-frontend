@@ -6,6 +6,10 @@ export const StyledLogo = styled.div`
   height: 290px;
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 568px) {
+    width: 100%;
+    justify-content: center;
+  }
 `
 export const StyledLogoElement = styled.div`
   position: relative;
@@ -20,6 +24,13 @@ export const StyledLogoElement = styled.div`
   font-weight: bold;
   font-size: 36px;
   box-sizing:border-box;
+
+  @media (max-width: 568px) {
+    width: 70px;
+    height: 70px;
+    font-size: 26px;
+    
+  }
 
   ${({ color }) =>
     !color &&

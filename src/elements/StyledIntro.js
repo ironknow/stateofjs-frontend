@@ -14,6 +14,10 @@ const StyledDescription = styled.div`
     height: 500px;
     border: solid 2px white;
     background-color: var(--dark);
+    @media (max-width: 968px) {
+      width: 90%;
+      height: auto;
+    }
   }
   .description-header {
     height: 98px;
@@ -41,6 +45,9 @@ const StyledDescription = styled.div`
     width: 400px;
     margin-left: 20px;
     line-height: 34px;
+    @media (max-width: 968px) {
+      font-size: 1.1rem;
+    }
   }
 
   .description-content {
@@ -51,6 +58,9 @@ const StyledDescription = styled.div`
     padding: 30px 42px;
     line-height: 30px;
     font-weight: 200;
+    @media (max-width: 968px) {
+      font-size: 1rem;
+    }
   }
   .view-results {
     width: 250px;
@@ -65,6 +75,11 @@ const StyledDescription = styled.div`
     font-weight: 600;
     margin: 35px auto 0 auto;
     background-color: var(--dark);
+
+    @media (max-width: 968px) {
+      font-size: 1.1rem;
+      height: 50px;
+    }
     &:hover {
       cursor: pointer;
       color: var(--red);
