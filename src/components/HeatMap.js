@@ -1,6 +1,6 @@
 import React from "react"
 import ChartHeatMap from "../components/charts/ChartHeatMap"
-import HeaderGraph from "../components/Header/HeaderGraph"
+import HeaderChart from "../components/Header/HeaderChart"
 import StyledHeatMap from "../elements/StyledHeatMap"
 import { gql } from "apollo-boost"
 import { useQuery } from "@apollo/react-hooks"
@@ -34,7 +34,7 @@ const HeatMap = () => {
   return (
     <>
       <div className="header-graphs">
-        <HeaderGraph
+        <HeaderChart
           label={t(`frameworks.heatmap.header.title`)}
           surveys={[]}
         />

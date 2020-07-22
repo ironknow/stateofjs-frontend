@@ -6,6 +6,7 @@ import "./i18n"
 import Landing from "./container/Landing"
 import Frameworks from "./container/Frameworks"
 import Framework from "./container/Framework"
+import Menu from "./container/Menu"
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         </Route>
         <Route path="/framework/:id">
           <Framework />
+        </Route>
+        <Route exact path="/menu">
+          <Menu />
         </Route>
         <Route exact path="/">
           <Landing />

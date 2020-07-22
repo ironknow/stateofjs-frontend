@@ -17,6 +17,12 @@ const Header = ({ framework }) => {
       <Link to="/frameworks">
         <div className="section">Front End Frameworks</div>
       </Link>
+      <div className="home">
+        <Link to="/">
+          <div className="home">Home</div>
+        </Link>
+      </div>
+
       <div className="langs">
         {langs &&
           langs.map((lang) => {
@@ -30,6 +36,12 @@ const Header = ({ framework }) => {
               </span>
             )
           })}
+      </div>
+
+      <div className="menu">
+        <Link to="/menu">
+          <div className="menu">Menu</div>
+        </Link>
       </div>
       <div className="title">{framework}</div>
     </StyledHeader>

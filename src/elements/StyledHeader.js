@@ -12,6 +12,9 @@ const StyledHeader = styled.header`
     padding-left: 2rem;
     color: var(--green-fluo);
     font-weight: 600;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
   .langs {
     width: 120px;
@@ -21,6 +24,9 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @media (max-width: 768px) {
+      display: none;
+    }
 
     .lang {
       font-weight: 800;
@@ -49,6 +55,25 @@ const StyledHeader = styled.header`
     font-weight: 600;
     align-items: flex-end;
     text-transform: capitalize;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .home {
+    display: start-left;
+    color: var(--green-fluo);
+
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+  .menu {
+    color: var(--green-fluo);
+
+    @media (min-width: 769px) {
+      display: none;
+    }
   }
 `
 

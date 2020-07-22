@@ -1,10 +1,10 @@
 import React from "react"
-import StyledGraph from "../../elements/StyledHeaderGraph"
-import Link from "../../components/Link"
+import StyledChart from "../../elements/StyledHeaderChart"
+import Link from "../Link"
 
-const HeaderGraph = ({ label, surveys, setSurvey }) => {
+const HeaderChart = ({ label, surveys, setSurvey }) => {
   return (
-    <StyledGraph>
+    <StyledChart>
       <div className="label">{label}</div>
 
       <div className="links">
@@ -12,8 +12,8 @@ const HeaderGraph = ({ label, surveys, setSurvey }) => {
           return <Link key={index} survey={survey} setSurvey={setSurvey}></Link>
         })}
       </div>
-    </StyledGraph>
+    </StyledChart>
   )
 }
 
-export default HeaderGraph
+export default HeaderChart

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const StyledHeaderGraph = styled.div`
+const StyledHeaderChart = styled.div`
   border-bottom: 1px solid #5d6069;
   display: flex;
   justify-content: space-between;
@@ -16,4 +16,4 @@ const StyledHeaderGraph = styled.div`
     margin-bottom: 1rem;
   }
 `
-export default StyledHeaderGraph
+export default StyledHeaderChart

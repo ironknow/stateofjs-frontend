@@ -3,7 +3,7 @@ import { gql } from "apollo-boost"
 import { useQuery } from "react-apollo"
 import { useTranslation } from "react-i18next"
 import formatDataStream from "../utils/formatDataStream"
-import HeaderGraph from "../components/Header/HeaderGraph"
+import HeaderChart from "../components/Header/HeaderChart"
 import ChartStream from "./charts/ChartStream"
 import StyledStream from "../elements/StyledStream"
 
@@ -47,7 +47,7 @@ const Stream = ({ framework }) => {
   return (
     <>
       <div className="header-graphs">
-        <HeaderGraph
+        <HeaderChart
           label={t(`framework.chart.title`)}
           surveys={["percentage", "count"]}
           setSurvey={setSurvey}

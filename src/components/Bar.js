@@ -3,7 +3,7 @@ import { gql } from "apollo-boost"
 import { Query } from "react-apollo"
 import ChartBar from "../components/charts/ChartBar"
 import formatDataBar from "../utils/formatDataBar"
-import HeaderGraph from "../components/Header/HeaderGraph"
+import HeaderChart from "../components/Header/HeaderChart"
 import StyledBar from "../elements/StyledBar"
 import Loading from "../components/Loading"
 import { useTranslation } from "react-i18next"
@@ -41,7 +41,7 @@ const Bar = () => {
         return (
           <>
             <div className="header-graphs">
-              <HeaderGraph
+              <HeaderChart
                 label={t(`frameworks.bar.header.title`)}
                 surveys={["percentage", "count"]}
                 setSurvey={setSurveyBar}

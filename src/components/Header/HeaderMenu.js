@@ -1,6 +1,6 @@
 import React from "react"
 import PeriodicElements from "../../components/PeriodicElement"
-
+import StyledHeaderMenu from "../../elements/StyledHeaderMenu"
 const elements = [
   {
     stars: 0,
@@ -22,7 +22,7 @@ const elements = [
 
 const HeaderMenu = () => {
   return (
-    <div style={{ display: "flex", borderBox: "contains" }}>
+    <StyledHeaderMenu>
       {elements.map(({ stars, symbol }, index) => {
         return (
           <div key={index}>
@@ -35,7 +35,7 @@ const HeaderMenu = () => {
           </div>
         )
       })}
-    </div>
+    </StyledHeaderMenu>
   )
 }
 

@@ -3,7 +3,7 @@ import { gql } from "apollo-boost"
 import { useQuery } from "@apollo/react-hooks"
 import ChartBump from "../components/charts/ChartBump"
 import formatDataBump from "../utils/formatDataBump"
-import HeaderGraph from "../components/Header/HeaderGraph"
+import HeaderChart from "../components/Header/HeaderChart"
 import StyledBumb from "../elements/StyledBump"
 import { useTranslation } from "react-i18next"
 
@@ -34,7 +34,7 @@ const Bump = () => {
   return (
     <>
       <div className="header-graphs">
-        <HeaderGraph
+        <HeaderChart
           label={t(`frameworks.bump.header.title`)}
           surveys={["satisfaction", "awareness", "interest"]}
           setSurvey={setSurvey}
