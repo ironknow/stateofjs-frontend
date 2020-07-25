@@ -1,4 +1,4 @@
-const formatDataStream = (experiences, framework, survey) => {
+const formatDataStream = (experiences) => {
   return experiences.reduce((acc, experience) => {
     const data = experience.buckets.reduce((bucket, { id, count }) => {
       console.log(typeof Number(count))

@@ -6,8 +6,10 @@ import formatDataStream from "../utils/formatDataStream"
 import HeaderChart from "../components/Header/HeaderChart"
 import ChartStream from "./charts/ChartStream"
 import StyledStream from "../elements/StyledStream"
+import ChartsLegend from "./charts/ChartsLegend"
 
 const Stream = ({ framework }) => {
+  const [hover, setHover] = useState(null)
   const [survey, setSurvey] = useState("count")
   const [t] = useTranslation()
 
@@ -34,15 +36,7 @@ const Stream = ({ framework }) => {
   if (loading) return null
   if (error) return `Error! ${error}`
 
-  console.log(data)
-
-  // console.log("experiences", data.experiences)
-  const experiences = formatDataStream(
-    data.experiences[0].data,
-    framework,
-    survey
-  )
-  console.log("experiences fomated", experiences)
+  const experiences = formatDataStream(data.experiences[0].data)
 
   return (
     <>
@@ -59,7 +53,8 @@ const Stream = ({ framework }) => {
       </span>
 
       <StyledStream>
-        <ChartStream data={experiences} />
+        <ChartStream data={experiences} hover={hover} />
+        <ChartsLegend setHover={setHover} />
       </StyledStream>
     </>
   )

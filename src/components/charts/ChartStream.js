@@ -1,41 +1,5 @@
 import React from "react"
 import { ResponsiveStream } from "@nivo/stream"
-// make sure parent container have a defined height when using
-// responsive component, otherwise height will be 0 and
-// no chart will be rendered.
-// website examples showcase many properties,
-// you'll often use just a few of them.
-
-const data = [
-  {
-    interested: 3619,
-    never_heard: 55,
-    not_interested: 1184,
-    would_not_use: 403,
-    would_use: 4996,
-  },
-  {
-    interested: 6362,
-    never_heard: 82,
-    not_interested: 2575,
-    would_not_use: 1020,
-    would_use: 13760,
-  },
-  {
-    interested: 3856,
-    never_heard: 28,
-    not_interested: 1858,
-    would_not_use: 1355,
-    would_use: 13057,
-  },
-  {
-    interested: 2040,
-    never_heard: 9,
-    not_interested: 1554,
-    would_not_use: 1717,
-    would_use: 14382,
-  },
-]
 
 const keys = [
   "interested",
@@ -45,12 +9,40 @@ const keys = [
   "would_use",
 ]
 
-const ChartStream = (/* see data tab */
-/*{ data }*/) => (
+const renderDot = ({ x, y, size, data }) => {
+  if (data.value > 1000) {
+    return (
+      <g transform={`translate(${x}, ${y})`} style={{ pointerEvents: "none" }}>
+        <rect
+          x={size * -3}
+          y={size * -0.5}
+          width={50}
+          height={20}
+          fill={"rgba(255,255,255,0.8)"}
+        />
+        <text
+          fontWeight="bold"
+          textAnchor="middle"
+          x={size - 5}
+          y={size + 1}
+          fill={"black"}
+          fontSize="11px"
+        >
+          {Number(data.value).toLocaleString()}
+        </text>
+      </g>
+    )
+  }
+}
+
+const ChartStream = ({ data, hover }) => (
   <ResponsiveStream
     data={data}
     keys={keys}
-    margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+    enableDots={true}
+    //dotSize={50}
+    renderDot={renderDot}
+    margin={{ top: 50, right: 60, bottom: 150, left: 60 }}
     axisTop={{
       orient: "top",
       tickSize: 5,
@@ -58,6 +50,9 @@ const ChartStream = (/* see data tab */
       tickRotation: 0,
       legend: "",
       legendOffset: 36,
+      format: (year) => {
+        return year === 0 ? 2016 : year === 1 ? 2017 : year === 2 ? 2018 : 2019
+      },
     }}
     axisRight={null}
     axisBottom={{
@@ -67,21 +62,40 @@ const ChartStream = (/* see data tab */
       tickRotation: 0,
       legend: "",
       legendOffset: 36,
+      format: (year) => {
+        return year === 0 ? 2016 : year === 1 ? 2017 : year === 2 ? 2018 : 2019
+      },
     }}
     axisLeft={null}
     offsetType="expand"
     order="reverse"
     curve="linear"
     colors={({ index }) => {
-      return index === 0
-        ? "#43C6C7"
-        : index === 1
-        ? "#63E0E1"
-        : index === 2
-        ? "#63E0E1"
-        : index === 3
-        ? "#FC8E8F"
-        : "#FD696A"
+      if ((index === 0 && hover === "interested") || (index === 0 && !hover)) {
+        return "#43C6C7"
+      } else if (
+        (index === 1 && hover === "never_heard") ||
+        (index === 1 && !hover)
+      ) {
+        return "#BFBFBE"
+      } else if (
+        (index === 2 && hover === "not_interested") ||
+        (index === 2 && !hover)
+      ) {
+        return "#63E0E1"
+      } else if (
+        (index === 3 && hover === "would_not_use") ||
+        (index === 3 && !hover)
+      ) {
+        return "#FC8E8F"
+      } else if (
+        (index === 4 && hover === "would_use") ||
+        (index === 4 && !hover)
+      ) {
+        return "#FD696A"
+      } else {
+        return "#2C2D33"
+      }
     }}
     fillOpacity={1}
     theme={{
@@ -97,6 +111,7 @@ const ChartStream = (/* see data tab */
         },
       },
       tooltip: {
+        width: 350,
         color: "#1342a7",
         fontSize: "14px",
         boxShadow: "5px 5px rgba(0,0,0,0.2)",
@@ -126,13 +141,13 @@ const ChartStream = (/* see data tab */
     fill={[
       {
         match: {
-          id: "Paul",
+          id: "",
         },
         id: "dots",
       },
       {
         match: {
-          id: "Marcel",
+          id: "",
         },
         id: "squares",
       },
@@ -144,26 +159,7 @@ const ChartStream = (/* see data tab */
     animate={true}
     motionStiffness={90}
     motionDamping={15}
-    legends={[
-      {
-        anchor: "bottom-right",
-        direction: "column",
-        translateX: 100,
-        itemWidth: 80,
-        itemHeight: 20,
-        itemTextColor: "#999999",
-        symbolSize: 12,
-        symbolShape: "circle",
-        effects: [
-          {
-            on: "hover",
-            style: {
-              itemTextColor: "#000000",
-            },
-          },
-        ],
-      },
-    ]}
+    legends={[]}
   />
 )
 
