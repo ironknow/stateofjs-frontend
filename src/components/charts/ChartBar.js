@@ -43,7 +43,7 @@ const ChartBar = ({ data, surveyBar, hover }) => {
           match: {
             id: "never_heard",
           },
-          id: (!hover || hover === "never_heard") && "lines",
+          id: !hover || hover === "never_heard" ? "lines" : "null",
           color: "white",
         },
       ]}

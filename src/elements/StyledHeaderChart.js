@@ -6,6 +6,7 @@ const StyledHeaderChart = styled.div`
   justify-content: space-between;
   height: 45px;
   align-items: center;
+  padding-top: 1rem;
   @media (max-width: 968px) {
     width: 100%;
   }

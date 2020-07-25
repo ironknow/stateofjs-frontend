@@ -19,7 +19,7 @@ const StyledFrameworks = styled.div`
     }
     .main {
       padding: 3rem 4rem;
-      min-height: 600px;
+      min-height: 900px;
       @media (max-width: 968px) {
         padding: 0;
       }

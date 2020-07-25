@@ -1,11 +1,11 @@
 import React from "react"
-import ChartHeatMap from "../components/charts/ChartHeatMap"
 import HeaderChart from "../components/Header/HeaderChart"
 import StyledHeatMap from "../elements/StyledHeatMap"
 import { gql } from "apollo-boost"
 import { useQuery } from "@apollo/react-hooks"
 import { formatDataHeatMap } from "../utils/fomatDataHeatMap"
 import { useTranslation } from "react-i18next"
+import Heat from "./charts/Heat"
 
 const HeatMap = () => {
   const [t] = useTranslation()
@@ -44,7 +44,7 @@ const HeatMap = () => {
       </span>
 
       <StyledHeatMap>
-        <ChartHeatMap data={usages} />
+        <Heat data={usages} />
       </StyledHeatMap>
     </>
   )

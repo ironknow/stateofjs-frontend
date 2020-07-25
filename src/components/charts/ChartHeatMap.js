@@ -1,12 +1,5 @@
 import React, { useState } from "react"
-
 import { ResponsiveHeatMap } from "@nivo/heatmap"
-
-// make sure parent container have a defined height when using
-// responsive component, otherwise height will be 0 and
-// no chart will be rendered.
-// website examples showcase many properties,
-// you'll often use just a few of them.
 
 const ChartHeatMap = ({ data /* see data tab */, keys }) => {
   const [opacity, setOpacity] = useState(1)
@@ -32,25 +25,14 @@ const ChartHeatMap = ({ data /* see data tab */, keys }) => {
         theme,
       }) => {
         return (
-          <g
-            transform={`translate(${x}, ${y})`}
-            onMouseEnter={onHover}
-            onMouseMove={(data) => {
-              setOpacity(0.2)
-            }}
-            onMouseLeave={onLeave}
-            onClick={(data, e) => {
-              console.log(data, e)
-            }}
-            style={{ cursor: "pointer" }}
-          >
+          <g transform={`translate(${x}, ${y})`}>
             {/* // Your custom SVG elements goes here */}
             {enableLabel && (
               <>
                 <rect
                   x={-5}
                   y={-15}
-                  width={150}
+                  width={50}
                   height={50}
                   fill={
                     value < 1
@@ -103,6 +85,7 @@ const ChartHeatMap = ({ data /* see data tab */, keys }) => {
             text: {
               fill: "var(--white)",
               fontSize: "14px",
+              transform: "capitalize",
             },
           },
         },

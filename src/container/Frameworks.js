@@ -26,7 +26,7 @@ const Frameworks = () => {
             <Bar />
             <HeatMap />
           </main>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </StyledFrameworks>
     </Layout>
