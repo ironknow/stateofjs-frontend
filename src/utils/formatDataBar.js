@@ -1,6 +1,4 @@
 const formatDataBar = (overviews, surveyBar, hover) => {
-  console.log("state hover", hover)
-  console.log("state hover", !hover)
   const colors = {
     would_use: hover === "would_use" || !hover ? "#FD696A" : "#2C2D33",
     would_not_use: hover === "would_not_use" || !hover ? "#FC8E8F" : "#2C2D33",

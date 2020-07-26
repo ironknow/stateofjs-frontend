@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { StyledHeat, StyledData, StyledLine } from "../../elements/StyledHeat"
 
 const Heat = ({ data }) => {
+  const [hover, setHover] = useState(null)
   const keys = [`<1`, `1~2`, `2~5`, `5~10`, `10~20`, `>20`]
   const defs = [
     { range: 0, color: "#2F575B" },
@@ -10,6 +11,7 @@ const Heat = ({ data }) => {
     { range: 30, color: "#398587" },
     { range: 40, color: "#3EB2B1" },
   ]
+
   return (
     <StyledHeat>
       <div className="legend">
@@ -24,29 +26,38 @@ const Heat = ({ data }) => {
           })}
         </div>
       </div>
-      <div>
+      <div onMouseLeave={() => setHover(null)}>
         {data.map((line, index) => {
+          console.log(line)
           return (
-            <StyledLine key={index} index={index}>
-              <div className="line title">{line.framework}</div>
-              <div className="line graph">
-                {keys.map((key, index) => {
-                  return (
-                    <StyledData
-                      key={index}
-                      data={line[key]}
-                    >{`${line[key]}%`}</StyledData>
-                  )
-                })}
-              </div>
-            </StyledLine>
+            <div
+              key={index}
+              onMouseOver={() => {
+                setHover(index)
+                console.log(index)
+              }}
+            >
+              <StyledLine index={index} hover={hover}>
+                <div className="line title">{line.framework}</div>
+                <div className="line graph">
+                  {keys.map((key, index) => {
+                    return (
+                      <StyledData
+                        key={index}
+                        data={line[key]}
+                      >{`${line[key]}%`}</StyledData>
+                    )
+                  })}
+                </div>
+              </StyledLine>
+            </div>
           )
         })}
       </div>
       <div className="def">
-        {defs.map(({ range, color }) => {
+        {defs.map(({ range, color }, index) => {
           return (
-            <div className="def item">
+            <div key={index} className="def item">
               <span>{range}%</span>
               <span
                 style={{ backgroundColor: color }}

@@ -1,6 +1,7 @@
 import React from "react"
 import StyledMenu from "../elements/StyledMenu"
 import HeaderMenu from "../components/Header/HeaderMenu"
+import MenuFooter from "../components/MenuFooter"
 import { Link, useParams } from "react-router-dom"
 
 const Menu = ({ frameworksList }) => {
@@ -26,6 +27,7 @@ const Menu = ({ frameworksList }) => {
             )
           })}
       </div>
+      <MenuFooter />
     </StyledMenu>
   )
 }

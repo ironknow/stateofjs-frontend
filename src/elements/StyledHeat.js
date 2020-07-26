@@ -71,36 +71,58 @@ export const StyledLine = styled.div`
   align-items:center;
   justify-content:space-between;
   padding-left:1rem;
+  cursor:pointer;
 
-  ${({ index }) =>
-    index === 0 &&
+ 
+  ${({ index, hover }) =>
+    hover !== null &&
+    index === hover &&
     css`
       background: #2a2d33;
     `}
 
-    ${({ index }) =>
-      index === 2 &&
-      css`
-        background: #2a2d33;
-      `}
-    ${({ index }) =>
-      index === 4 &&
+  ${({ index, hover }) =>
+    hover !== null &&
+    index !== hover &&
+    css`
+      background: #484848;
+      opacity: 0.1;
+    `}
+
+    ${({ index, hover }) =>
+      index === 0 &&
+      !hover &&
       css`
         background: #2a2d33;
       `}
 
-     .title{
-      height:40px;
-      font-size:14px;
-      line-height:24px;
-      text-transform:capitalize;
-      display:flex;
-      align-items:center;
-     
-    }
-    .graph{
-      display:flex;
-    }
+    ${({ index, hover }) =>
+      index === 2 &&
+      !hover &&
+      css`
+        background: #2a2d33;
+      `}
+
+    ${({ index, hover }) =>
+      index === 4 &&
+      !hover &&
+      css`
+        background: #2a2d33;
+      `}
+
+  .title{
+    height:40px;
+    font-size:14px;
+    line-height:24px;
+    text-transform:capitalize;
+    display:flex;
+    align-items:center;
+   
+  }
+  
+  .graph{
+    display:flex;
+  }
 
 
 `

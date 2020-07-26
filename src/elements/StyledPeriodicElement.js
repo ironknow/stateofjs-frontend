@@ -26,7 +26,22 @@ ${({ component }) =>
       border: 1px solid #5d6069;
     }
   `}
+  ${({ component }) =>
+    component === "footer" &&
+    css`
+      width: 66.5px;
+      height: 67px;
+      opacity: 1;
+      border: 1px solid #5d6069;
+      border-right: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
+      @media (max-width: 968px) {
+        border: 1px solid #5d6069;
+      }
+    `}
 
 
   ${({ index, component }) =>
