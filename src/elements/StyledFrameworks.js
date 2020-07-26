@@ -18,8 +18,8 @@ const StyledFrameworks = styled.div`
       margin-bottom: 1rem;
     }
     .main {
-      padding: 3rem 4rem;
-      min-height: 900px;
+      padding: 3rem 4rem 0 4rem;
+      min-height: 800px;
       @media (max-width: 968px) {
         padding: 0;
       }

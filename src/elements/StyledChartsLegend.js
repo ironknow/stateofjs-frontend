@@ -12,13 +12,20 @@ export const StyledChartsLegend = styled.div`
 
   .legend {
     width: 200px;
-    height: 100%;
+    height: 70%;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    &:hover {
+      background: #2a2d33;
+    }
   }
   .text {
     font-size: 14px;
     width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
   }
 `
 export const StyledShape = styled.div`

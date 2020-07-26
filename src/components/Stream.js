@@ -29,6 +29,7 @@ const Stream = ({ framework }) => {
     }
   `
 
+  console.log(survey)
   const { loading, error, data } = useQuery(EXPERIENCES_QUERY, {
     variables: { framework },
   })
@@ -36,8 +37,8 @@ const Stream = ({ framework }) => {
   if (loading) return null
   if (error) return `Error! ${error}`
 
-  const experiences = formatDataStream(data.experiences[0].data)
-
+  const experiences = formatDataStream(data.experiences[0].data, survey)
+  console.log(experiences)
   return (
     <>
       <div className="header-graphs">
@@ -53,7 +54,7 @@ const Stream = ({ framework }) => {
       </span>
 
       <StyledStream>
-        <ChartStream data={experiences} hover={hover} />
+        <ChartStream data={experiences} hover={hover} survey={survey} />
         <ChartsLegend setHover={setHover} />
       </StyledStream>
     </>

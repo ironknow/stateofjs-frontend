@@ -1,12 +1,10 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
-
 import StyledDescription from "../elements/StyledDescription"
 
 const Description = ({ id }) => {
   const [t] = useTranslation()
-  // window.reactI18next
-  // console.log(t)
+
   return (
     <StyledDescription>
       <div className="element">

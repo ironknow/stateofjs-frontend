@@ -78,5 +78,12 @@
       "github": "https://github.com/emberjs/ember.js",
       "homepage": "https://emberjs.com/"
     }
+  },
+  "legends": {
+    "would_use": "Je l'ai déjà UTILISÉ auparavant, et je l'utiliserais à nouveau",
+    "would_not_use": "Je l'ai déjà utilisé auparavant et je ne l'utiliserai PLUS",
+    "interested": "J'en ai entendu PARLER, et j'AIMERAIS bien l'apprendre",
+    "not_interested": "J'en ai entendu parler, et je ne suis PAS intéressé",
+    "never_heard": "Je n'en ai jamais entendu parler"
   }
 }
