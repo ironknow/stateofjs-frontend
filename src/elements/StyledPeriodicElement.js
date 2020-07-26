@@ -27,7 +27,7 @@ ${({ component }) =>
     }
   `}
   ${({ component }) =>
-    component === "footer" &&
+    component === "contact" &&
     css`
       width: 66.5px;
       height: 67px;

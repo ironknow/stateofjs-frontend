@@ -1,6 +1,6 @@
 import React from "react"
 import PeriodicElements from "./PeriodicElement"
-import StyledMenuFooter from "../elements/StyledMenuFooter"
+import StyledMenuContact from "../elements/StyledMenuContact"
 import { Mail, GitHub, Linkedin, Facebook } from "react-feather"
 
 const contact = [
@@ -22,18 +22,18 @@ const contact = [
   },
 ]
 
-const MenuFooter = () => {
+const MenuContact = () => {
   return (
-    <StyledMenuFooter>
+    <StyledMenuContact>
       {contact.map(({ href, symbol }, index) => {
         return (
-          <a key={index} href={href} target="_blank">
-            <PeriodicElements symbol={symbol} component={"footer"} />
+          <a key={index} href={href} target="_blank" rel="noopener noreferrer">
+            <PeriodicElements symbol={symbol} component={"contact"} />
           </a>
         )
       })}
-    </StyledMenuFooter>
+    </StyledMenuContact>
   )
 }
 
-export default MenuFooter
+export default MenuContact

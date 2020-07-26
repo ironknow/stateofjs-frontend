@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { StyledHeat, StyledData, StyledLine } from "../../elements/StyledHeat"
 
 const Heat = ({ data }) => {
@@ -28,7 +28,6 @@ const Heat = ({ data }) => {
       </div>
       <div onMouseLeave={() => setHover(null)}>
         {data.map((line, index) => {
-          console.log(line)
           return (
             <div
               key={index}
