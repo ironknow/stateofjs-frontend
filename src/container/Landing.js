@@ -26,14 +26,7 @@ const FrameworksQuery = () => {
               <Loading />
             </div>
           )
-        if (error)
-          return (
-            <div>
-              <div>
-                <Loading />
-              </div>
-            </div>
-          )
+        if (error) return <div>{error}</div>
         const frameworks = data.frameworks
 
         return (

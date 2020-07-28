@@ -10,11 +10,10 @@ import { createHttpLink } from "apollo-link-http"
 import { InMemoryCache } from "apollo-cache-inmemory"
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:4000",
+  uri: process.env.REACT_APP_API,
 })
 
 //connect AppolloClient with GraphQL Api
-//Graphql Server will be running on http://localhost:4000
 const client = new ApolloClient({
   link: httpLink,
   cache: new InMemoryCache({

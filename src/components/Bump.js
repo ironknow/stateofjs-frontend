@@ -29,6 +29,8 @@ const Bump = () => {
   if (loading) return "Loading..."
   if (error) return `Error! ${error.message}`
 
+  console.log("lalala", data)
+
   const rankings = formatDataBump(data.rankings, survey)
 
   return (
