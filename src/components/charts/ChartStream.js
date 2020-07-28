@@ -11,7 +11,6 @@ const keys = [
 
 const ChartStream = ({ data, survey, hover }) => {
   const renderDot = ({ x, y, size, data }) => {
-    console.log(survey)
     if (
       (survey === "count" && data.value > 1000) ||
       (survey === "percentage" && data.value > 5)

@@ -33,7 +33,6 @@ const Heat = ({ data }) => {
               key={index}
               onMouseOver={() => {
                 setHover(index)
-                console.log(index)
               }}
             >
               <StyledLine index={index} hover={hover}>
