@@ -8,7 +8,7 @@ import Footer from "../components/Footer"
 import StyledFrameworks from "../elements/StyledFrameworks"
 import { useParams } from "react-router-dom"
 
-const Framework = ({ t }) => {
+const Framework = () => {
   const { id } = useParams()
 
   return (
