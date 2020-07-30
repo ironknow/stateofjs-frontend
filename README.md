@@ -1,7 +1,7 @@
 <h1 align="center">Stateofjs Clone</h1>
 
 <p align="center">
-  <img width="500" src="https://github.com/LilaGuill/stateofjs-frontend/blob/master/public/screen.png" alt="capture-1">
+  <img width="500" src="https://github.com/LilaGuill/stateofjs-frontend/blob/master/public/screen.gif" alt="capture-1">
 </p>
 
 <p align="center">
