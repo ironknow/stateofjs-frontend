@@ -1,68 +1,77 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Stateofjs Clone</h1>
 
-## Available Scripts
+<p align="center">
+  <img width="500" src="https://github.com/LilaGuill/stateofjs-frontend/blob/master/public/screen.png" alt="capture-1">
+</p>
 
-In the project directory, you can run:
+<p align="center">
+  Demo:<a href="https://stateofjs-clone.netlify.app/" target="_blank"> https://stateofjs-clone.netlify.app</a>
+</p>
+<p align="center">
+ This project was bootstrapped with <a href=https://github.com/facebook/create-react-app. target="_blank">Create React App</a>
+</p>
 
-### `yarn start`
+## Overview
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Web application, full-stack project**
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+**Functionalities**
 
-### `yarn test`
+- Fetch frameworks
+- Dispay Charts
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**UI**
 
-### `yarn build`
+- Homemade UI with styled-components
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Dependencies**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Running the project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone this repository :
 
-### `yarn eject`
+```
+git clone https://github.com/LilaGuill/stateofjs-frontend.git
+cd stateofjs-frontend
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Install packages :
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+When installation is complete, run the project with:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+npm start
+```
 
-## Learn More
+## Client
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React
+- Hooks
+- React-apollo
+- Routing with react-router-dom
+- Nivo (chart)
+- I18n (translation)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Server
 
-### Code Splitting
+- Node.js
+- GraphQL yoga
+- Mongoose
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## StateOfJs backend
 
-### Analyzing the Bundle Size
+<a href="https://github.com/LilaGuill/stateofjs-backend.git">https://github.com/LilaGuill/stateofjs-backend.git</a>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Deployment
 
-### Making a Progressive Web App
+- Client deployed with Netlify
+- Server deployed with Heroku
+- MongoDb database hosted on Mongo Atlas
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Contact
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<a href="https://www.linkedin.com/in/lila-guillermic-66542476/" target="_blank">My Linkedin Profil</a>
