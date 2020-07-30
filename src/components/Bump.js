@@ -4,6 +4,7 @@ import { useQuery } from "@apollo/react-hooks"
 import ChartBump from "../components/charts/ChartBump"
 import formatDataBump from "../utils/formatDataBump"
 import HeaderChart from "../components/Header/HeaderChart"
+import Loading from "../components/Loading"
 import StyledBumb from "../elements/StyledBump"
 import { useTranslation } from "react-i18next"
 
@@ -26,7 +27,7 @@ const Bump = () => {
 
   const { loading, error, data } = useQuery(RANKING_QUERY)
 
-  if (loading) return "Loading..."
+  if (loading) return <Loading />
   if (error) return `Error! ${error.message}`
 
   const rankings = formatDataBump(data.rankings, survey)

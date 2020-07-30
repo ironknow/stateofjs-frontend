@@ -9,6 +9,9 @@ export const StyledChartsLegend = styled.div`
   border: 1px solid var(--white);
   position: relative;
   bottom: 4rem;
+  @media (max-width: 968px) {
+    display: none;
+  }
 
   .legend {
     width: 200px;

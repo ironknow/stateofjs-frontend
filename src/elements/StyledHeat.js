@@ -32,6 +32,13 @@ export const StyledHeat = styled.div`
       font-size:14px;
       line-height:24px;
       font-weight:800;
+      @media (max-width: 968px) {
+  
+        width: 40px;
+        height: 20px;
+        font-size: 10px;
+      }
+      
     }
   }
   .def{
@@ -41,7 +48,9 @@ export const StyledHeat = styled.div`
     height:50px;
     margin-top:1rem;
     padding-right:25px;
-    
+    @media (max-width: 968px) {
+      display:none;
+    }
 
     .item{
       width:40px;
@@ -136,6 +145,12 @@ export const StyledData = styled.div`
   font-size: 12px;
   font-weight: 500;
   color: black;
+  @media (max-width: 968px) {
+  
+    width: 40px;
+    height: 20px;
+    font-size: 10px;
+  }
 
   ${({ data }) =>
     data < 1 &&

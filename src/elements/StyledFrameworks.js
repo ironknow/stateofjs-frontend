@@ -29,6 +29,10 @@ const StyledFrameworks = styled.div`
       margin-top: 5px;
       font-size: 1rem;
       line-height: 1.8rem;
+
+      @media (max-width: 968px) {
+        display: none;
+      }
     }
   }
 `

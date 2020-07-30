@@ -16,10 +16,10 @@ const StyledMenu = styled.aside`
   @media (max-width: 968px) {
     padding-top: 1rem;
     width: 100%;
-    height: 140px;
+    height: 240px;
     border: none;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     position: relative;
   }
@@ -31,6 +31,8 @@ const StyledMenu = styled.aside`
       width: 90%;
       flex-wrap: wrap;
       justify-content: center;
+      margin-top: 50px;
+      margin-left: 0;
     }
   }
 

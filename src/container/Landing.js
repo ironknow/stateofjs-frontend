@@ -5,6 +5,7 @@ import PeriodicElement from "../components/PeriodicElement"
 import StyledLanding from "../elements/StyledLanding"
 import Intro from "../components/Intro"
 import Loading from "../components/Loading"
+import formatDataLanding from "../utils/formatDataLanding"
 
 const FRAMEWORKS_QUERY = gql`
   {
@@ -27,11 +28,39 @@ const FrameworksQuery = () => {
             </div>
           )
         if (error) return <div>{error}</div>
-        const frameworks = data.frameworks
+        const frameworks = formatDataLanding(data.frameworks)
 
         return (
-          <>
+          <StyledLanding>
             <div className="periodic-elements">
+              {frameworks.map((line, index) => {
+                console.log(line)
+                return (
+                  <div
+                    key={index}
+                    style={{
+                      width: "100%",
+                      display: "flex",
+                    }}
+                  >
+                    {line[index].map(({ stars, symbol, name, _id }, i) => {
+                      return (
+                        <PeriodicElement
+                          key={_id}
+                          stars={stars}
+                          symbol={symbol}
+                          name={name}
+                          index={i}
+                          line={index}
+                        />
+                      )
+                    })}
+                  </div>
+                )
+              })}
+            </div>
+
+            {/* 
               {frameworks.map(({ stars, symbol, name, _id }, index) => {
                 return (
                   <PeriodicElement
@@ -42,10 +71,10 @@ const FrameworksQuery = () => {
                     index={index}
                   />
                 )
-              })}
-            </div>
+              })} */}
+
             <Intro />
-          </>
+          </StyledLanding>
         )
       }}
     </Query>
