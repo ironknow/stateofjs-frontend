@@ -4,7 +4,6 @@ import { useQuery } from "@apollo/react-hooks"
 import ChartBump from "../components/charts/ChartBump"
 import formatDataBump from "../utils/formatDataBump"
 import HeaderChart from "../components/Header/HeaderChart"
-import Loading from "../components/Loading"
 import StyledBumb from "../elements/StyledBump"
 import { useTranslation } from "react-i18next"
 
