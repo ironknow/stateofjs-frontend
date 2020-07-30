@@ -34,7 +34,6 @@ const FrameworksQuery = () => {
           <StyledLanding>
             <div className="periodic-elements">
               {frameworks.map((line, index) => {
-                console.log(line)
                 return (
                   <div
                     key={index}

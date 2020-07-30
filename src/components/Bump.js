@@ -27,7 +27,7 @@ const Bump = () => {
 
   const { loading, error, data } = useQuery(RANKING_QUERY)
 
-  if (loading) return <Loading />
+  if (loading) return "loading"
   if (error) return `Error! ${error.message}`
 
   const rankings = formatDataBump(data.rankings, survey)
