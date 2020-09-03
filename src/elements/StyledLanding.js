@@ -9,8 +9,12 @@ const StyledLanding = styled.div`
 
   .periodic-elements {
     min-height: 400px;
+    width: 100%;
 
     @media (max-width: 968px) {
+      display: none;
+    }
+    @media (min-width: 1475px) {
       display: none;
     }
   }

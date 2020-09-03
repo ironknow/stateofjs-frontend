@@ -1,31 +1,31 @@
 import styled, { css } from "styled-components"
 
 const StyledPeriodicElement = styled.div`
-width: 69.5px;
-height: 70px;
-border: 2px solid white;
-opacity: 0.6;
-transform: scale(1.03);
-transition: all 1s linear;
+  width: 69.5px;
+  height: 70px;
+  border: 2px solid white;
+  opacity: 0.6;
+  transform: scale(1.03);
+  transition: all 1s linear;
 
-&:hover {
-  background: rgba(255,255,255,0.2);
-  cursor:pointer;
-}
-${({ component }) =>
-  component === "header" &&
-  css`
-    width: 66.5px;
-    height: 67px;
-    opacity: 1;
-    border: 1px solid #5d6069;
-    border-right: none;
-    border-top: none;
-
-    @media (max-width: 968px) {
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
+  ${({ component }) =>
+    component === "header" &&
+    css`
+      width: 66.5px;
+      height: 67px;
+      opacity: 1;
       border: 1px solid #5d6069;
-    }
-  `}
+      border-right: none;
+      border-top: none;
+
+      @media (max-width: 968px) {
+        border: 1px solid #5d6069;
+      }
+    `}
   ${({ component }) =>
     component === "contact" &&
     css`
@@ -275,7 +275,7 @@ ${({ component }) =>
     padding-top: 5px;
     padding-left: 5px;
     font-size: 12px;
-    color:var(--white);
+    color: var(--white);
   }
 
   .symbol {
@@ -291,21 +291,20 @@ ${({ component }) =>
       css`
         font-size: 26px;
         color: white;
-      `} 
-      ${({ component, index }) =>
-        component === "header" &&
-        index > 1 &&
-        index <= 3 &&
-        css`
-          font-size: 26px;
-          color: #fd696a;
-        `} 
+      `}
+    ${({ component, index }) =>
+      component === "header" &&
+      index > 1 &&
+      index <= 3 &&
+      css`
+        font-size: 26px;
+        color: #fd696a;
+      `}
   }
   .name {
     font-size: 0.6vw;
     text-align: center;
     overflow: hidden;
-
-    }
+  }
 `
 export default StyledPeriodicElement
