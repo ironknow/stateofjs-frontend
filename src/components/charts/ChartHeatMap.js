@@ -7,26 +7,9 @@ const ChartHeatMap = ({ data /* see data tab */, keys }) => {
   return (
     <ResponsiveHeatMap
       data={data}
-      cellShape={({
-        data,
-        value,
-        x,
-        y,
-        width,
-        height,
-        color,
-        borderWidth,
-        borderColor,
-        enableLabel,
-        textColor,
-        onHover,
-        onLeave,
-        onClick,
-        theme,
-      }) => {
+      cellShape={({ value, x, y, enableLabel }) => {
         return (
           <g transform={`translate(${x}, ${y})`}>
-            {/* // Your custom SVG elements goes here */}
             {enableLabel && (
               <>
                 <rect
